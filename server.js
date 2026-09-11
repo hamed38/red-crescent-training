@@ -75,7 +75,7 @@ const server = http.createServer((req, res) => {
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify({embeds: [{title: "اجتياز التدريب ومنح رتبة", color: 13111342, fields: [
             {name: "معرّف Discord", value: userId, inline: true},
-            {name: "الرتبة", value: roleId, inline: true},
+            {name: "الرتبة", value: discordRoleId, inline: true},
             {name: "الحالة", value: "تم منح الرتبة بنجاح", inline: false}
           ], timestamp: new Date().toISOString()}]})
         });
