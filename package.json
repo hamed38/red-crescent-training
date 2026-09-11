@@ -1,6 +1,7 @@
 {
   "name": "red-crescent-training",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "type": "module",
   "scripts": {
     "start": "node server.js"
