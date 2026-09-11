@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>اختبارات الهلال الأحمر بسدير</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar"><div class="logo">✚</div><div><strong>الهلال الأحمر بسدير</strong><span>منصة تدريب واختبار الموظفين والمتقدمين</span></div><button id="homeBtn" class="home-button hidden">الصفحة الرئيسية <span>⌂</span></button></header>
+    <section id="welcome" class="welcome-layout">
+      <div class="welcome-intro">
+        <div class="welcome-badge"><span>✚</span><strong>تدريب موثوق</strong></div>
+        <p class="eyebrow">منصة التأهيل والتدريب</p>
+        <h1>استعد لتكون<br><em>جاهزًا للاستجابة</em></h1>
+        <p class="welcome-message">تعلّم مهارات الإسعافات الأولية واختبر جاهزيتك بخطوات واضحة وتدريب عملي مبسّط.</p>
+        <div class="feature-list">
+          <div><span>01</span><strong>محتوى تدريبي مختصر</strong><small>دروس سهلة قبل كل اختبار</small></div>
+          <div><span>02</span><strong>اختبارات تفاعلية</strong><small>تقدمك محفوظ تلقائيًا</small></div>
+          <div><span>03</span><strong>نتيجة موثقة</strong><small>اطبع نتيجتك بعد الإكمال</small></div>
+        </div>
+      </div>
+      <div class="card welcome-form">
+        <div class="form-heading">
+          <div class="welcome-logo" aria-hidden="true">✚</div>
+          <div><p class="brand-name">الهلال الأحمر بسدير</p><p class="eyebrow">ابدأ رحلتك الآن</p></div>
+        </div>
+        <h2>بيانات المتقدم</h2>
+        <p class="muted">أدخل بياناتك للانتقال إلى مسار التدريب.</p>
+        <div class="candidate-fields">
+          <label>اسم المتقدم<input id="candidateName" placeholder="اكتب الاسم الكامل" maxlength="80"></label>
+          <label>العمر<input id="candidateAge" type="number" min="16" max="80" placeholder="مثال: 22"></label>
+          <label>معرّف Discord<input id="candidateDiscord" inputmode="numeric" placeholder="مثال: 123456789012345678" maxlength="20"></label>
+        </div>
+        <button id="startBtn" class="primary">بدء التدريب والاختبار <span>←</span></button><p id="welcomeError" class="error"></p>
+        <p class="form-note">يتطلب اجتياز 70٪ في كل مرحلة للانتقال إلى المرحلة التالية.</p>
+      </div>
+    </section>
+    <section id="dashboard" class="hidden">
+      <div class="progress-card"><div><p class="eyebrow">مسار التأهيل</p><h2 id="candidateLabel"></h2></div><div class="progress"><span id="progressBar"></span></div><strong id="progressText">0 / 4</strong></div>
+      <div id="stageList" class="stage-list"></div>
+    </section>
+    <section id="training" class="card hidden"><button id="backBtn" class="back">← العودة للمراحل</button><p class="eyebrow" id="stageEyebrow"></p><h1 id="stageTitle"></h1><div class="guide-heading"><span>دليل إرشادي</span><small>اقرأ التعليمات قبل بدء الأسئلة</small></div><div id="lesson" class="lesson"></div><button id="quizBtn" class="primary">بدء اختبار المرحلة</button></section>
+    <section id="quiz" class="card hidden"><p class="eyebrow" id="quizEyebrow"></p><h1 id="quizTitle"></h1><div id="questions"></div><button id="submitQuiz" class="primary">تسليم الإجابات</button><p id="quizMessage" class="result"></p></section>
+    <section id="final" class="card hidden"><div class="success-mark">✓</div><h1>تهانينا، اجتزت التدريب</h1><p class="muted">تم اجتياز جميع المراحل والاختبار النهائي بنجاح.</p><div id="finalSummary" class="summary"></div><button id="printBtn" class="primary">طباعة النتيجة</button></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

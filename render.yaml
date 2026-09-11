@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: red-crescent-training
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
