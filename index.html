@@ -13,8 +13,9 @@
       <div class="welcome-intro">
         <div class="welcome-badge"><span>✚</span><strong>تدريب موثوق</strong></div>
         <p class="eyebrow">منصة التأهيل والتدريب</p>
-        <h1>استعد لتكون<br><em>جاهزًا للاستجابة</em></h1>
-        <p class="welcome-message">تعلّم مهارات الإسعافات الأولية واختبر جاهزيتك بخطوات واضحة وتدريب عملي مبسّط.</p>
+        <p class="hero-kicker">تأهيل عملي • تقييم معتمد</p>
+        <h1>جاهز للخطوة<br><em>التالية؟</em></h1>
+        <p class="welcome-message">أكمل مسار التأهيل، اختبر مهاراتك، واحصل على نتيجة واضحة تساعدك على الاستجابة بثقة.</p>
         <div class="feature-list">
           <div><span>01</span><strong>محتوى تدريبي مختصر</strong><small>دروس سهلة قبل كل اختبار</small></div>
           <div><span>02</span><strong>اختبارات تفاعلية</strong><small>تقدمك محفوظ تلقائيًا</small></div>
@@ -26,19 +27,20 @@
           <div class="welcome-logo" aria-hidden="true">✚</div>
           <div><p class="brand-name">الهلال الأحمر بسدير</p><p class="eyebrow">ابدأ رحلتك الآن</p></div>
         </div>
-        <h2>بيانات المتقدم</h2>
-        <p class="muted">أدخل بياناتك للانتقال إلى مسار التدريب.</p>
+        <h2>ابدأ اختبارك الآن</h2>
+        <p class="muted">أدخل بياناتك كما هي مسجلة في المدينة للبدء.</p>
         <div class="candidate-fields">
-          <label>اسم المتقدم<input id="candidateName" placeholder="اكتب الاسم الكامل" maxlength="80"></label>
-          <label>العمر<input id="candidateAge" type="number" min="16" max="80" placeholder="مثال: 22"></label>
-          <label>معرّف Discord<input id="candidateDiscord" inputmode="numeric" placeholder="مثال: 123456789012345678" maxlength="20"></label>
+          <label>اسمك في المدينة<input id="candidateName" placeholder="اكتب اسمك المعتمد في المدينة" maxlength="80"></label>
+          <label>عمرك<input id="candidateAge" type="number" min="16" max="80" placeholder="مثال: 22"></label>
+          <label>معرّفك في Discord<input id="candidateDiscord" inputmode="numeric" placeholder="أدخل معرّف Discord الرقمي" maxlength="20"></label>
         </div>
-        <button id="startBtn" class="primary">بدء التدريب والاختبار <span>←</span></button><p id="welcomeError" class="error"></p>
+        <button id="startBtn" class="primary">دخول إلى مسار التأهيل <span>←</span></button><p id="welcomeError" class="error"></p>
+        <div class="form-trust"><span>✓ بياناتك محفوظة محليًا</span><span>✓ 8 مراحل تدريبية</span></div>
         <p class="form-note">يتطلب اجتياز 70٪ في كل مرحلة للانتقال إلى المرحلة التالية.</p>
       </div>
     </section>
     <section id="dashboard" class="hidden">
-      <div class="progress-card"><div><p class="eyebrow">مسار التأهيل</p><h2 id="candidateLabel"></h2></div><div class="progress"><span id="progressBar"></span></div><strong id="progressText">0 / 4</strong></div>
+      <div class="progress-card"><div><p class="eyebrow">مسار التأهيل</p><h2 id="candidateLabel"></h2></div><div class="progress"><span id="progressBar"></span></div><strong id="progressText">0 / 8</strong></div>
       <div id="stageList" class="stage-list"></div>
     </section>
     <section id="training" class="card hidden"><button id="backBtn" class="back">← العودة للمراحل</button><p class="eyebrow" id="stageEyebrow"></p><h1 id="stageTitle"></h1><div class="guide-heading"><span>دليل إرشادي</span><small>اقرأ التعليمات قبل بدء الأسئلة</small></div><div id="lesson" class="lesson"></div><button id="quizBtn" class="primary">بدء اختبار المرحلة</button></section>
