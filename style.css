@@ -112,6 +112,14 @@ input:focus { border-color: var(--red); box-shadow: 0 0 0 4px rgba(200, 16, 46, 
 .stage-status { float: left; color: var(--muted); font-size: 12px; }
 .stage.done .stage-status, .stage-score { color: var(--green); }
 .stage-score { display: block; margin-top: 10px; font-size: 13px; }
+.progress-summary { padding: 24px; margin-top: 18px; border: 1px solid var(--line); border-radius: 18px; background: #101d30; }
+.progress-summary h3 { margin-top: 0; color: var(--navy); }
+.progress-summary strong { color: var(--green); }
+.result-status { display: inline-block; padding: 7px 12px; margin-top: 12px; border-radius: 20px; font-weight: bold; }
+.result-status.pass { color: #b7f3d7; background: #173d35; }
+.result-status.fail { color: #ffc2ca; background: #45202b; }
+.secondary-button { padding: 11px 18px; margin-top: 18px; border: 1px solid var(--line); border-radius: 11px; color: var(--navy); background: #1e3049; font: inherit; font-weight: bold; cursor: pointer; }
+.secondary-button:hover { border-color: var(--red); color: #fff; }
 .question { padding: 22px; margin: 16px 0; border: 1px solid var(--line); border-radius: 16px; background: rgba(16, 29, 48, .55); }
 .question h3 { margin-top: 0; line-height: 1.8; }
 
