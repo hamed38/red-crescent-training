@@ -28,6 +28,7 @@ body {
 
 body::before { content: ""; position: fixed; inset: 0 0 auto; z-index: 4; height: 4px; background: var(--red); }
 .app { width: min(1120px, calc(100% - 40px)); margin: auto; padding: 28px 0 64px; }
+.site-footer { width: min(1120px, calc(100% - 40px)); padding: 18px 0 28px; margin: 0 auto; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; text-align: center; }
 
 .topbar {
   display: flex;
@@ -100,13 +101,19 @@ input:focus { border-color: var(--red); box-shadow: 0 0 0 4px rgba(200, 16, 46, 
 .stage { position: relative; overflow: hidden; padding: 24px; border: 1px solid var(--line); border-radius: 17px; background: #17253a; transition: .2s; }
 .stage::after { content: ""; position: absolute; left: -24px; bottom: -32px; width: 92px; height: 92px; border: 1px solid rgba(230,57,80,.12); border-radius: 50%; }
 .stage:hover { border-color: #bfd0df; box-shadow: 0 16px 30px rgba(20,43,74,.08); transform: translateY(-3px); }
+.stage::before { content: "سيناريو ميداني"; position: absolute; top: 18px; left: 18px; padding: 4px 8px; border: 1px solid rgba(230,57,80,.25); border-radius: 20px; color: #ffb4c1; background: rgba(230,57,80,.08); font-size: 10px; }
 .stage.done { border-color: #347c65; background: #142d30; }
+.stage.cooldown { border-color: #8b5d3e; background: #2a2222; }
+.stage.cooldown .stage-status, .cooldown-note { color: #f1b27c; }
+.cooldown-note { font-size: 12px !important; }
 .stage h3 { margin: 8px 0; color: var(--navy); font-size: 18px; }
 .stage p { margin: 7px 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
 .stage button { margin-top: 11px; }
 .stage-status { float: left; color: var(--muted); font-size: 12px; }
 .stage.done .stage-status, .stage-score { color: var(--green); }
 .stage-score { display: block; margin-top: 10px; font-size: 13px; }
+.question { padding: 22px; margin: 16px 0; border: 1px solid var(--line); border-radius: 16px; background: rgba(16, 29, 48, .55); }
+.question h3 { margin-top: 0; line-height: 1.8; }
 
 .back { padding: 0; margin-bottom: 20px; border: 0; color: var(--red); background: none; cursor: pointer; font: inherit; font-weight: bold; }
 .card h1 { margin: 10px 0; color: var(--navy); font-size: 31px; }
@@ -118,6 +125,8 @@ input:focus { border-color: var(--red); box-shadow: 0 0 0 4px rgba(200, 16, 46, 
 .question h3 { margin: 0 0 14px; color: var(--navy); font-size: 16px; line-height: 1.8; }
 .option { display: block; padding: 13px 14px; margin: 9px 0; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); background: #111f33; cursor: pointer; font-weight: normal; transition: .15s; }
 .option:hover { border-color: var(--blue); background: #1a304c; }
+.option.locked { cursor: not-allowed; opacity: .82; }
+.option.locked:hover { border-color: var(--line); background: #111f33; }
 .option:has(input:checked) { border-color: var(--red); background: #3b1d2b; }
 .option input { display: inline; width: auto; margin: 0 8px 0 0; vertical-align: middle; }
 .result { min-height: 20px; margin-top: 18px; font-weight: bold; }
